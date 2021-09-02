@@ -37,8 +37,6 @@ const crud  = {
         'Content-Type': 'application/json'
       }
     })
-    // console.log(resp)
-    // console.log(resp.data?.message)
     if (resp.status === 200) {
 
     } else {

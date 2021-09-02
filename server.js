@@ -1,7 +1,6 @@
 const http = require("http");
 const fs = require('fs').promises;
 const path = require('path')
-//const hmtl = require("index.html")
 
 const host = 'localhost';
 const port = 8080;

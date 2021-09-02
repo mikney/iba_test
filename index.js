@@ -1,6 +1,5 @@
 import crud from '/crud.js'
 import {table as tableHtml} from './components/table.js'
-// const Crud = require('./crud')
 
 
 
@@ -34,9 +33,7 @@ modalForm.addEventListener('submit', (event) => {
     }
   if (state.isEdit) {
     crud.edit(state.changeId, obj).then(() => {
-      for( let i=0; i<modalForm.elements.length - 1; i++ ) {
-        modalForm.elements[i].value = ''
-      }
+      modalForm.reset()
       crud.get().then(resp => {
         tableHtml(resp, state)
         state.data = resp
@@ -50,9 +47,7 @@ modalForm.addEventListener('submit', (event) => {
         state.data = resp
       })
     })
-    for( let i=0; i<modalForm.elements.length - 1; i++ ) {
-      modalForm.elements[i].value = ''
-    }
+    modalForm.reset()
     document.querySelector('.modal').style.display = "none"
 
   }
@@ -72,9 +67,8 @@ document
   .querySelector('.modal')
   .addEventListener('click', (event) => {
   if (event.target === document.querySelector('.modal')) {
-      for( let i=0; i<modalForm.elements.length - 1; i++ ) {
-        modalForm.elements[i].value = ''
-      }
+      modalForm.reset()
+
       event.target.style.display = 'none'
   }
 })
