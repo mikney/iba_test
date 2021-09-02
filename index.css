@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+}
+.main {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.search {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+input {
+    border: 2px solid #c1c1c1;
+    border-radius: 5px;
+    padding: 4px 7px;
+}
+.add {
+    background-color: white;
+}
+
+.modal__form button {
+    margin-top: 20px;
+}
+
+button {
+    border: none;
+    padding: 7px 9px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+button:hover {
+    background-color: #929292;
+}
+button:active {
+    background-color: #6a6a6a;
+}
+.table {
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+.table th {
+    border: 1px solid #000;
+    margin: 0;
+    padding: 5px 10px;
+}
+
+.table__header th {
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*line-height: 20px;*/
+}
+/*.table__header*/
+.table__header th img {
+    width: 20px;
+}
+
+
+
+
+
+.actions__button {
+    background-color: white;
+    width: 10px;
+    border: none;
+    width: max-content;
+
+}
+.actions__button img {
+    width: 30px;
+}
+.modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.modal__form {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    z-index: 1000;
+    transform: translate3d(50%, -50%, 0);
+}
+.modal__form label {
+    font-weight: bold;
+    padding: 10px;
+}
+
+.actions {
+    display: flex;
+
+}
